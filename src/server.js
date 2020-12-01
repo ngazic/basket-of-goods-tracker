@@ -14,6 +14,10 @@ app.use(express.json());
 app.set("title", "Gym Tracker");
 app.set('port', port);
 
+app.set('views', path.join(__dirname, 'views'));
+// app.set('views', './views') // specify the views directory
+app.set('view engine', 'pug') // register the template engine
+
 app.get("/", (req, res) => {
   console.log("requesting app ");
   // res.end("hello from my first node app");
@@ -23,6 +27,10 @@ app.get("/", (req, res) => {
       msg: "thank you for learning node ",
     })
   );
+});
+
+app.get("/index", (req, res) => {
+  res.render('index', { title: 'Hey', message: 'Hello there!' })
 });
 
 

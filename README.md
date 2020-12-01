@@ -4,5 +4,5 @@
 
 ## Development
 ```
-npm run start
+npm run start # or npm start
 ```
