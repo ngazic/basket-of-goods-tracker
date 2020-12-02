@@ -1,3 +1,4 @@
+const path = require("path");
 var express = require("express");
 var cors = require("cors");
 var app = express();
@@ -10,11 +11,13 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-//Set app properties
+//===========Set app properties=================
+
 app.set("title", "Gym Tracker");
 app.set('port', port);
 
-app.set('views', path.join(__dirname, 'views'));
+//view engine setup
+app.set('views',path.join(__dirname,'views'));
 // app.set('views', './views') // specify the views directory
 app.set('view engine', 'pug') // register the template engine
 
