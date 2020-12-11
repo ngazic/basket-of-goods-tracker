@@ -1,5 +1,3 @@
-console.log('YOU STARTED ME');
-console.log('this works');
 
 // Start our app!
 const app = require('./server');
