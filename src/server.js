@@ -10,7 +10,9 @@ const port = process.env.PORT || 3000;
 
 //Set middlewares
 app.use(cors());
-app.use(express.json());
+app.use('/static', express.static(path.join(__dirname, 'public')))
+app.use(express.json()); // handle REST API call as json
+app.use(express.urlencoded({extended: true}));//handle form submit request
 
 
 //Use routers

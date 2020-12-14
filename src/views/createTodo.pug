@@ -1,0 +1,10 @@
+extends layout
+
+block main
+  .row
+    .col-12-sm.col-6.center
+      form(action="/create-todo" method="post" class="form")
+        input(type="text" name="title" )
+        textarea(name="body" cols="30" rows="10")
+        input(type="date" name="date")
+        input(type="submit" value="ADD")

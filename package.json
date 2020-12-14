@@ -4,8 +4,9 @@
   "description": "Simple MERN stack app tracking exercises",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/start.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./src/start.js --ignore src/public/",
+    "build": "webpack -w",
+    "dev": "concurrently \"npm run start\" \"npm run build\""
   },
   "keywords": [
     "MERN",
@@ -26,6 +27,14 @@
     "pug": "^3.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "concurrently": "^5.3.0",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.6",
+    "postcss-loader": "^4.1.0",
+    "sass-loader": "^10.1.0",
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0"
   }
 }

@@ -1,0 +1,1 @@
+this is example hello text file for static files serving
