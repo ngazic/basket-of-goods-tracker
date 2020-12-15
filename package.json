@@ -6,7 +6,9 @@
   "scripts": {
     "start": "nodemon ./src/start.js --ignore src/public/",
     "build": "webpack -w",
-    "dev": "concurrently \"npm run start\" \"npm run build\""
+    "dev": "concurrently \"npm run start\" \"npm run build\"",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "npm run lint -- --fix"
   },
   "keywords": [
     "MERN",
