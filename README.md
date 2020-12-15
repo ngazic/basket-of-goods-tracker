@@ -4,5 +4,8 @@
 
 ## Development
 ```
-npm run start # or npm start
+npm run dev # or npm dev
 ```
+
+## Documentation and useful links
+[Sass Flexbox grid](http://sassflexboxgrid.com)

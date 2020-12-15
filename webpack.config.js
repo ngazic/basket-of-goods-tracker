@@ -2,8 +2,8 @@ const path = require("path");
 
 module.exports = {
   entry: [
-    __dirname + "/src/public/js/app.js",
-    __dirname + "/src/public/scss/app.scss",
+    `${__dirname}/src/public/js/app.js`,
+    `${__dirname}/src/public/scss/main.scss`,
   ],
   output: {
     path: path.resolve(__dirname, "src/public/dist"),
@@ -25,9 +25,8 @@ module.exports = {
             options: { outputPath: "css/", name: "[name].min.css" },
           },
           {
-            loader: 'sass-loader'
+            loader: "sass-loader",
           },
-          
         ],
       },
     ],
